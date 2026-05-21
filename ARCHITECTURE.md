@@ -146,12 +146,12 @@ GUI 파일(`step18/20/23/24/30/31/32/33_*_gui`)은 presentation 계층 — 툴�
 | `LineOrchestrator` | `step17_orchestrator.py` | 🔜 |
 | `QualityJudge` 도메인 서비스 | `step24` 2280–2604 | 🔜 |
 
-### 3.7 plc 🔜 추출 예정
+### 3.7 plc ✅ PlcClient 추출 완료
 
 | 추출 대상 | 출처 | 상태 |
 |---|---|---|
-| `PlcClient` (read/write bit·word, device offset) | `step29_plc_bridge` 하위 계층 | 🔜 |
-| `LadderPlcBridge` (ladder 정책) | `step29` 상위 계층 | 🔜 |
+| `PlcClient` (read/write bit·word, device offset) | `step29_plc_bridge` 하위 계층 | ✅ |
+| `LadderPlcBridge` (ladder 정책) | `step29` 상위 계층 | 🔜 (프로젝트별) |
 
 MC Protocol(`pymcprotocol`). ladder 디바이스 맵(`B200/B300/Y160/X145` 등)은
 프로젝트별 설정으로 분리.
