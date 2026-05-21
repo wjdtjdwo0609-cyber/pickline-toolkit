@@ -189,9 +189,10 @@ OpenCV 세그먼트 매처.)
 
 원본 시스템 동작을 깨지 않도록 **저위험 → 고위험** 순서로.
 
-- **Phase 0 ✅** — repo 골격, 공유 커널, 인프라, 순수 수학, 포트 정의. *(현재)*
-- **Phase 1** — 인프라 어댑터: `RealSenseSource`/`AVFoundationSource`/`WebcamSource`,
-  `PlcClient`, `YoloDetector`. 동작 변화 0, 단위 테스트 추가.
+- **Phase 0 ✅** — repo 골격, 공유 커널, 인프라, 순수 수학, 포트 정의.
+- **Phase 1 ✅** — 비전 어댑터: `RealSenseSource`/`WebcamSource`/`DryRunSource`/
+  `open_camera`, `YoloDetector`/`parse_yolo_result`, `StableDecision`. *(현재)*
+  남음: `AVFoundationSource`(macOS ffmpeg 우회), `PlcClient`.
 - **Phase 2** — 도메인 서비스: `IndyController`, `Gripper`, `DioHandshake`,
   `HandEyeCalibrator`, `PlaneHomographyCalibrator`, `CharucoBoardModel`,
   `QualityJudge`. god object에서 로직 분리.

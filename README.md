@@ -73,16 +73,18 @@ device = select_device()             # 환경에 맞게 자동
 
 ## 현재 상태 (v0.1.0)
 
-이 저장소는 **단계적 추출** 중이다.
+이 저장소는 **단계적 추출** 중이다. (테스트 24개 통과)
 
 | 모듈 | 상태 |
 |---|---|
-| `shared` (값 객체·이벤트·예외) | ✅ 추출 완료 |
-| `infra.file_ipc` / `infra.device` | ✅ 추출 완료 |
-| `calibration.transforms` (순수 수학) | ✅ 추출 완료 |
-| `robot.RobotController` / `vision.CameraSource` / `vision.ObjectDetector` 포트 | ✅ 인터페이스 확정 |
-| `picking.PickConfig` | ✅ 추출 완료 |
-| 카메라 어댑터, YoloDetector, hand-eye/호모그래피 solver, IndyController 구현 | 🔜 로드맵 (ARCHITECTURE.md) |
+| `shared` (값 객체·이벤트·예외) | ✅ Phase 0 |
+| `infra.file_ipc` / `infra.device` | ✅ Phase 0 |
+| `calibration.transforms` (순수 수학) | ✅ Phase 0 |
+| 포트: `RobotController`/`CameraSource`/`ObjectDetector` | ✅ Phase 0 |
+| `picking.PickConfig` | ✅ Phase 0 |
+| `vision` 카메라 어댑터 (RealSense/Webcam/DryRun) | ✅ Phase 1 |
+| `vision.YoloDetector` / `parse_yolo_result` / `StableDecision` | ✅ Phase 1 |
+| AVFoundation 카메라, hand-eye/호모그래피 solver, IndyController 구현 | 🔜 Phase 2~ (ARCHITECTURE.md) |
 
 ## 출처
 
