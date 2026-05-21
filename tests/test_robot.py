@@ -5,8 +5,6 @@ dry_run=True로 하드웨어/SDK 없이 인터페이스 계약을 검증한다.
 
 from pickline.robot import IndyController, RobotController
 from pickline.shared.value_objects import Pose6D
-from pickline.shared.errors import RobotMotionError
-import pytest
 
 
 def make() -> IndyController:

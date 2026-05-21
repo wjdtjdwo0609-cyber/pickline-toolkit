@@ -3,7 +3,6 @@
 실행: pytest    또는    python -m pytest tests/
 """
 
-import math
 import numpy as np
 
 from pickline.shared import Pose6D, Detection, EventBus, PickCompleted, WeightRange

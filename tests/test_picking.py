@@ -3,8 +3,6 @@
 dry_run IndyController + dry_run VacuumGripper로 9단계 픽 시퀀스를 검증.
 """
 
-import pytest
-
 from pickline.robot import IndyController, VacuumGripper
 from pickline.picking import PickCycle, PickConfig, PickResult
 from pickline.shared.value_objects import PickTarget, Pose6D

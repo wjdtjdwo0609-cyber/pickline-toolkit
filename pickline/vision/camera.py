@@ -20,12 +20,6 @@ from typing import Iterator, Optional, Protocol, runtime_checkable
 
 from pickline.shared.value_objects import CameraIntrinsics
 
-try:  # numpy는 선택적 — 타입 힌트용
-    import numpy as np
-    _NDArray = "np.ndarray"
-except ImportError:  # pragma: no cover
-    _NDArray = "object"
-
 
 @dataclass
 class Frame:

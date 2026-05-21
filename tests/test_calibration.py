@@ -60,7 +60,7 @@ def test_hand_eye_result_quality():
 # --- PlaneHomographyCalibrator (cv2 필요) ---
 
 def test_plane_homography_recovers_known_map():
-    cv2 = pytest.importorskip("cv2")
+    pytest.importorskip("cv2")
     cal = PlaneHomographyCalibrator()
     # 알려진 변환: base_xy = pixel * 0.5 + (100, 200)
     pixels = [(0, 0), (640, 0), (640, 480), (0, 480)]
@@ -83,7 +83,7 @@ def test_plane_homography_too_few_points():
 # --- CalibrationStore ---
 
 def test_store_plane_roundtrip(tmp_path):
-    cv2 = pytest.importorskip("cv2")
+    pytest.importorskip("cv2")
     cal = PlaneHomographyCalibrator()
     for u, v in [(0, 0), (100, 0), (100, 100), (0, 100)]:
         cal.add_point((u, v), [u + 10, v + 20, 95.0])

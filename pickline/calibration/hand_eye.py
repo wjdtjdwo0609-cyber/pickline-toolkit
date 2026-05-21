@@ -14,8 +14,8 @@ Intel5 step7_solve_hand_eye.py 의 솔버 + step21 GUI의 중복 구현을 통�
 
 from __future__ import annotations
 
-from dataclasses import dataclass, field
-from typing import List, Optional
+from dataclasses import dataclass
+from typing import List
 
 from pickline.calibration.charuco import CharucoBoardModel
 from pickline.calibration.transforms import pose_to_matrix

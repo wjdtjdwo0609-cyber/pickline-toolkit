@@ -1,7 +1,6 @@
 """Phase 1 비전 모듈 단위 테스트 — 카메라 어댑터, 검출 파싱, 안정화."""
 
 import numpy as np
-import pytest
 
 from pickline.shared.value_objects import Detection
 from pickline.vision import (
@@ -32,7 +31,7 @@ def test_dryrun_source_intrinsics():
 # --- find_latest_model ---
 
 def test_find_latest_model_picks_newest(tmp_path):
-    import os, time
+    import time
     for name in ("a", "b"):
         d = tmp_path / "runs" / name / "weights"
         d.mkdir(parents=True)

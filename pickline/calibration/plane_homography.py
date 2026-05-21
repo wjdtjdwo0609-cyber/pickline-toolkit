@@ -11,7 +11,7 @@ Intel5 step22_plane_calib_gui.py 의 solve() 로직 추출.
 
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import List, Sequence, Tuple
 
 from pickline.shared.errors import CalibrationError
