@@ -193,9 +193,10 @@ OpenCV 세그먼트 매처.)
 - **Phase 1 ✅** — 비전 어댑터: `RealSenseSource`/`WebcamSource`/`DryRunSource`/
   `open_camera`, `YoloDetector`/`parse_yolo_result`, `StableDecision`. *(현재)*
   남음: `AVFoundationSource`(macOS ffmpeg 우회), `PlcClient`.
-- **Phase 2 (진행 중)** — 도메인 서비스. ✅ `IndyController` 완료.
-  남음: `Gripper`(Vacuum), `DioHandshake`, `HandEyeCalibrator`,
-  `PlaneHomographyCalibrator`, `CharucoBoardModel`, `QualityJudge`.
+- **Phase 2 ✅** — 도메인 서비스. `IndyController`, `VacuumGripper`,
+  `RobotDioHandshake`, `CharucoBoardModel`, `HandEyeCalibrator`,
+  `PlaneHomographyCalibrator`, `CalibrationStore` 완료.
+  남음: `QualityJudge` (god object에서 분리, Phase 3과 함께).
 - **Phase 3** — 애플리케이션: `PickCycle`, `FileIpcWorker` 베이스, `LineOrchestrator`.
   `step24`/`step27`/`step37`의 중복 4,000+줄 통합.
 - **Phase 4** — GUI를 presentation-only로 다이어트 (도메인 호출만).

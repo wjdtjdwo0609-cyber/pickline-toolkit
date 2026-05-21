@@ -73,19 +73,18 @@ device = select_device()             # 환경에 맞게 자동
 
 ## 현재 상태 (v0.1.0)
 
-이 저장소는 **단계적 추출** 중이다. (테스트 24개 통과)
+이 저장소는 **단계적 추출** 중이다. (테스트 56개 통과)
 
 | 모듈 | 상태 |
 |---|---|
 | `shared` (값 객체·이벤트·예외) | ✅ Phase 0 |
 | `infra.file_ipc` / `infra.device` | ✅ Phase 0 |
-| `calibration.transforms` (순수 수학) | ✅ Phase 0 |
 | 포트: `RobotController`/`CameraSource`/`ObjectDetector` | ✅ Phase 0 |
 | `picking.PickConfig` | ✅ Phase 0 |
-| `vision` 카메라 어댑터 (RealSense/Webcam/DryRun) | ✅ Phase 1 |
-| `vision.YoloDetector` / `parse_yolo_result` / `StableDecision` | ✅ Phase 1 |
-| `robot` 도메인 전체 (IndyController/VacuumGripper/RobotDioHandshake) | ✅ Phase 2 |
-| hand-eye/호모그래피 solver, PickCycle, AVFoundation 카메라 | 🔜 Phase 2~3 (ARCHITECTURE.md) |
+| `vision` 도메인 (카메라 어댑터, YoloDetector, StableDecision) | ✅ Phase 1 |
+| `robot` 도메인 (IndyController, VacuumGripper, RobotDioHandshake) | ✅ Phase 2 |
+| `calibration` 도메인 (transforms, charuco, hand-eye, 평면 호모그래피, store) | ✅ Phase 2b |
+| `picking.PickCycle`, `FileIpcWorker`, AVFoundation 카메라 | 🔜 Phase 3 (ARCHITECTURE.md) |
 
 ## 출처
 
