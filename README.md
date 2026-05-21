@@ -17,7 +17,8 @@
 한 파일(`step24_auto_pick_gui.py`)이 4,493줄 god object가 되는 등 재사용이 어려웠다.
 이 툴킷은 그 안의 **재사용 가능한 핵심**만 골라 bounded context로 분리한 것이다.
 
-자세한 분석과 추출 로드맵은 **[ARCHITECTURE.md](ARCHITECTURE.md)** 참고.
+- **[USAGE.md](USAGE.md)** — 모듈 구조 시각화 + 컨텍스트별 사용법 + 엔드투엔드 예제
+- **[ARCHITECTURE.md](ARCHITECTURE.md)** — DDD 설계 분석 + Intel5 파일 매핑 + 추출 로드맵
 
 ## 구조
 
