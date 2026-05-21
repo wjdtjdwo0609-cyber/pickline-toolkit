@@ -84,7 +84,8 @@ device = select_device()             # 환경에 맞게 자동
 | `picking.PickConfig` | ✅ Phase 0 |
 | `vision` 카메라 어댑터 (RealSense/Webcam/DryRun) | ✅ Phase 1 |
 | `vision.YoloDetector` / `parse_yolo_result` / `StableDecision` | ✅ Phase 1 |
-| AVFoundation 카메라, hand-eye/호모그래피 solver, IndyController 구현 | 🔜 Phase 2~ (ARCHITECTURE.md) |
+| `robot.IndyController` (neuromeka/indy_utils SDK 추상화) | ✅ Phase 2 |
+| `robot.Gripper`/`DioHandshake`, hand-eye/호모그래피 solver, AVFoundation 카메라 | 🔜 Phase 2~ (ARCHITECTURE.md) |
 
 ## 출처
 
