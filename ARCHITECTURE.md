@@ -197,8 +197,9 @@ OpenCV 세그먼트 매처.)
   `RobotDioHandshake`, `CharucoBoardModel`, `HandEyeCalibrator`,
   `PlaneHomographyCalibrator`, `CalibrationStore` 완료.
   남음: `QualityJudge` (god object에서 분리, Phase 3과 함께).
-- **Phase 3 (진행 중)** — 애플리케이션. ✅ `PickCycle` 완료 (9단계 픽 시퀀스).
-  남음: `FileIpcWorker` 베이스 (step27/37 ~2,000줄 중복 통합), `LineOrchestrator`.
+- **Phase 3 ✅** — 애플리케이션. `PickCycle`(9단계 픽 시퀀스),
+  `FileIpcWorker`(step27/37 워커 스캐폴딩 통합) 완료.
+  남음: `LineOrchestrator` (다채널 라인 운용).
 - **Phase 4** — GUI를 presentation-only로 다이어트 (도메인 호출만).
 - **Phase 5** — 도메인 이벤트 연결, 필요 시 microkernel/plugin.
 

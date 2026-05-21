@@ -73,7 +73,7 @@ device = select_device()             # 환경에 맞게 자동
 
 ## 현재 상태 (v0.1.0)
 
-이 저장소는 **단계적 추출** 중이다. (테스트 63개 통과)
+이 저장소는 **단계적 추출** 중이다. (테스트 72개 통과)
 
 | 모듈 | 상태 |
 |---|---|
@@ -84,7 +84,8 @@ device = select_device()             # 환경에 맞게 자동
 | `robot` 도메인 (IndyController, VacuumGripper, RobotDioHandshake) | ✅ Phase 2 |
 | `calibration` 도메인 (transforms, charuco, hand-eye, 평면 호모그래피, store) | ✅ Phase 2b |
 | `picking.PickCycle` (9단계 픽 시퀀스 + 재시도 + place) | ✅ Phase 3 |
-| `FileIpcWorker`, `LineOrchestrator`, AVFoundation 카메라 | 🔜 Phase 3~ (ARCHITECTURE.md) |
+| `picking.FileIpcWorker` (JSON 파일 IPC 워커 추상 베이스) | ✅ Phase 3 |
+| `LineOrchestrator`, `QualityJudge`, AVFoundation 카메라, PlcClient | 🔜 Phase 4~ (ARCHITECTURE.md) |
 
 ## 출처
 
