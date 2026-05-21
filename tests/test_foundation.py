@@ -92,6 +92,6 @@ def test_rpy_90deg_z():
 
 def test_pick_config_defaults():
     cfg = PickConfig()
-    assert cfg.z_safe_max_mm >= cfg.z_pickup_mm
+    assert cfg.fast_approach_above_mm > cfg.slow_approach_above_mm
     assert cfg.max_retries >= 0
-    assert len(cfg.approach_uvw_deg) == 3
+    assert len(cfg.compliance_stiffness) == 6
