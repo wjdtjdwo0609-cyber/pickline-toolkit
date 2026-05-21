@@ -4,7 +4,7 @@
 어떤 로봇 SDK(neuromeka IndyDCP3, 레거시 indy_utils 등)를 쓰든
 이 인터페이스 뒤에 숨긴다. 상위 계층(picking 등)은 이 Protocol에만 의존한다.
 
-구현체: `IndyController` (Intel5 step9_robot.py 에서 추출 예정 — ROADMAP 참고).
+구현체: `IndyController` (pickline.robot.indy_controller — Intel5 step9_robot.py 추출).
 """
 
 from __future__ import annotations

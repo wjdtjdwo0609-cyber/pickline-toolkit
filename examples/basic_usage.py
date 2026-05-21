@@ -51,8 +51,8 @@ def demo_events():
 
 def demo_pick_config():
     print("\n[6] 픽 설정 — 프로젝트별로 이 값만 바꿔 재사용")
-    cfg = PickConfig(z_pickup_mm=75, z_safe_max_mm=130, max_retries=3)
-    print(f"  접근높이={cfg.z_approach_above_mm}mm  집기={cfg.z_pickup_mm}mm  "
+    cfg = PickConfig(fast_approach_above_mm=50, z_safe_max_mm=130, max_retries=3)
+    print(f"  빠른접근={cfg.fast_approach_above_mm}mm  느린접근={cfg.slow_approach_above_mm}mm  "
           f"안전상한={cfg.z_safe_max_mm}mm  재시도={cfg.max_retries}")
 
 
