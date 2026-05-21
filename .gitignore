@@ -1,0 +1,58 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# ===== 가상환경 =====
+.venv/
+venv/
+env/
+binpick/
+
+# ===== 모델 가중치 (절대 커밋 금지 — GitHub 100MB 제한) =====
+*.pt
+*.pth
+*.onnx
+*.engine
+*.tflite
+
+# ===== 데이터셋 / 캡처 / 학습 결과 =====
+dataset/
+datasets/
+raw_captures/
+cleaned_images/
+new_images/
+detection_results/
+runs/
+sessions/
+
+# ===== 캘리브레이션 산출물 (장비별로 다름) =====
+*.npz
+calibration.json
+
+# ===== IPC / 런타임 산출물 =====
+ipc/
+*.tmp
+.*.tmp
+
+# ===== 대용량 아카이브 =====
+*.zip
+*.tar.gz
+
+# ===== OS / IDE =====
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ===== 로그 =====
+*.log
+*.jsonl

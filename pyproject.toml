@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pickline"
+version = "0.1.0"
+description = "비전 가이드 픽앤플레이스 라인 재사용 툴킷 (vision + robot + calibration + PLC)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Seongjae Jeong" }]
+keywords = ["robotics", "computer-vision", "yolo", "pick-and-place", "indy7", "calibration"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+]
+
+# 핵심 의존성 — 순수 도메인/인프라 계층만 쓰면 numpy 하나로 충분.
+dependencies = [
+    "numpy>=1.23",
+]
+
+# 하드웨어/백엔드별 선택적 의존성. 필요한 것만 설치한다.
+#   pip install pickline[vision]      # YOLO + OpenCV
+#   pip install pickline[realsense]   # RealSense 카메라
+#   pip install pickline[robot]       # Indy7 SDK
+#   pip install pickline[all]
+[project.optional-dependencies]
+vision = ["ultralytics>=8.0", "opencv-python>=4.8", "torch>=2.0"]
+realsense = ["pyrealsense2>=2.54"]
+robot = ["neuromeka>=3.2"]
+plc = ["pymcprotocol>=0.3"]
+config = ["pyyaml>=6.0"]
+dev = ["pytest>=7.0", "ruff>=0.5"]
+all = [
+    "ultralytics>=8.0", "opencv-python>=4.8", "torch>=2.0",
+    "pyrealsense2>=2.54", "neuromeka>=3.2", "pymcprotocol>=0.3", "pyyaml>=6.0",
+]
+
+[project.urls]
+Repository = "https://github.com/USERNAME/pickline-toolkit"
+
+[tool.setuptools.packages.find]
+include = ["pickline*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
