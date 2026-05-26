@@ -70,12 +70,12 @@ class PlaneHomographyCalibrator:
 
     def solve(self) -> PlaneCalibResult:
         """누적된 점들로 호모그래피를 푼다."""
-        import cv2
-        import numpy as np
-
         n = self.n_points
         if n < self.min_points:
             raise CalibrationError(f"점 부족 ({n}, 최소 {self.min_points})")
+
+        import cv2
+        import numpy as np
 
         pixels = np.array(self._pixels, dtype=np.float32)
         base_xy = np.array([p[:2] for p in self._base_poses], dtype=np.float32)
